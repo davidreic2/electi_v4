@@ -6,7 +6,7 @@ export default function VideoSection() {
   return (
     <section className="w-full relative overflow-hidden" style={{ height: "clamp(300px, 42vw, 600px)" }}>
       <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/c70e893dd1a975547cf09d222f2391cb2b5f81e4?width=4396"
+        src="/images/c70e893dd1a975547cf09d222f2391cb2b5f81e4.webp"
         alt="Video thumbnail"
         className="w-full h-full object-cover"
       />

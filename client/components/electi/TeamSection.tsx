@@ -4,7 +4,7 @@ const teamMembers = [
   {
     id: 1,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/dec64b337b64a2ab96651313ba61c7025cd5fbd8?width=160",
+      "/images/dec64b337b64a2ab96651313ba61c7025cd5fbd8.webp",
     name: "Lorem ipsum",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     color: "#34B7C0",
@@ -13,7 +13,7 @@ const teamMembers = [
   {
     id: 2,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/2ff1a4d75fa0bf7589cf6a87c3f115924d5e8963?width=160",
+      "/images/2ff1a4d75fa0bf7589cf6a87c3f115924d5e8963.webp",
     name: "Lorem ipsum",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     color: "#AECB3C",
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     id: 3,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/900fd000ba5960616338c9fc9281518404fe7d40?width=478",
+      "/images/900fd000ba5960616338c9fc9281518404fe7d40.webp",
     name: "Lorem ipsum",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     color: "#34B7C0",
@@ -31,7 +31,7 @@ const teamMembers = [
   {
     id: 4,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/2ff1a4d75fa0bf7589cf6a87c3f115924d5e8963?width=160",
+      "/images/2ff1a4d75fa0bf7589cf6a87c3f115924d5e8963.webp",
     name: "Lorem ipsum",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     color: "#AECB3C",

@@ -1,40 +1,137 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+interface SubLink {
+  label: string;
+  href: string;
+}
+
+interface NavItem {
+  label: string;
+  href?: string;
+  sub?: SubLink[];
+}
+
+const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
+  {
+    label: "A Electi",
+    sub: [
+      { label: "Para Escolas", href: "/para-escolas" },
+      { label: "Para Redes", href: "/para-redes" },
+      { label: "Quem Somos", href: "/quem-somos" },
+    ],
+  },
+  { label: "Como trabalhamos", href: "/como-trabalhamos" },
+  { label: "Na prática", href: "/na-pratica" },
+  { label: "Eventos", href: "/eventos" },
+];
+
+function DesktopDropdown({ item, pathname }: { item: NavItem; pathname: string }) {
+  const [open, setOpen] = useState(false);
+  const timeout = useRef<ReturnType<typeof setTimeout>>();
+
+  const isActive = item.sub?.some(
+    (s) => pathname === s.href || pathname.startsWith(s.href + "/")
+  );
+
+  const handleEnter = () => {
+    clearTimeout(timeout.current);
+    setOpen(true);
+  };
+
+  const handleLeave = () => {
+    timeout.current = setTimeout(() => setOpen(false), 150);
+  };
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      <button
+        className={`font-poppins text-base whitespace-nowrap transition-colors hover:text-[#EF7933] flex items-center gap-1 ${
+          isActive ? "text-[#EF7933] font-semibold" : "text-[#9D9D9D] font-normal"
+        }`}
+      >
+        {item.label}
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
+        >
+          <path
+            d="M3 4.5L6 7.5L9 4.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 mt-2 min-w-[180px] bg-white rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.15)] py-2 z-50">
+          {item.sub!.map((sub) => (
+            <Link
+              key={sub.label + sub.href}
+              to={sub.href}
+              className={`block px-4 py-2 font-poppins text-sm transition-colors hover:bg-gray-50 hover:text-[#EF7933] ${
+                pathname === sub.href || pathname.startsWith(sub.href + "/")
+                  ? "text-[#EF7933] font-semibold"
+                  : "text-[#9D9D9D]"
+              }`}
+              onClick={() => setOpen(false)}
+            >
+              {sub.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const { pathname } = useLocation();
 
-  const navLinks = [
-    { label: "Home", href: "/", active: true },
-    { label: "A Electi", href: "/a-electi" },
-    { label: "Como trabalhamos", href: "/como-trabalhamos" },
-    { label: "Na prática", href: "/na-pratica" },
-    { label: "Eventos", href: "/eventos" },
-  ];
+  const isLinkActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
   return (
     <nav className="w-full px-4 md:px-8 lg:px-[135px] pt-4 bg-white sticky top-0 z-50">
       <div className="flex items-center justify-between gap-6 px-6 md:px-8 py-3 rounded-2xl bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.30)]">
         {/* Logo */}
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/6cc4acb852d525cf860937b0c78de0a6a5333fc4?width=138"
+          src="/images/6cc4acb852d525cf860937b0c78de0a6a5333fc4.webp"
           alt="Electi"
           className="h-10 w-auto"
         />
 
         {/* Desktop nav links */}
         <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={`font-poppins text-base whitespace-nowrap transition-colors hover:text-[#EF7933] ${
-                link.active ? "text-[#EF7933] font-semibold" : "text-[#9D9D9D] font-normal"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.sub ? (
+              <DesktopDropdown key={item.label} item={item} pathname={pathname} />
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href!}
+                className={`font-poppins text-base whitespace-nowrap transition-colors hover:text-[#EF7933] ${
+                  isLinkActive(item.href!)
+                    ? "text-[#EF7933] font-semibold"
+                    : "text-[#9D9D9D] font-normal"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* CTA Button */}
@@ -75,19 +172,76 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden mt-2 mx-2 rounded-2xl bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.20)] p-6 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={`font-poppins text-base py-1 border-b border-gray-100 ${
-                link.active ? "text-[#EF7933] font-semibold" : "text-[#9D9D9D]"
-              }`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="lg:hidden mt-2 mx-2 rounded-2xl bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.20)] p-6 flex flex-col gap-2">
+          {navItems.map((item) =>
+            item.sub ? (
+              <div key={item.label}>
+                <button
+                  className={`w-full flex items-center justify-between font-poppins text-base py-2 border-b border-gray-100 ${
+                    item.sub.some((s) => isLinkActive(s.href))
+                      ? "text-[#EF7933] font-semibold"
+                      : "text-[#9D9D9D]"
+                  }`}
+                  onClick={() =>
+                    setMobileExpanded(mobileExpanded === item.label ? null : item.label)
+                  }
+                >
+                  {item.label}
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    className={`transition-transform ${
+                      mobileExpanded === item.label ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      d="M3 4.5L6 7.5L9 4.5"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                {mobileExpanded === item.label && (
+                  <div className="pl-4 flex flex-col gap-1 py-1">
+                    {item.sub.map((sub) => (
+                      <Link
+                        key={sub.label + sub.href}
+                        to={sub.href}
+                        className={`font-poppins text-sm py-1.5 ${
+                          isLinkActive(sub.href)
+                            ? "text-[#EF7933] font-semibold"
+                            : "text-[#9D9D9D]"
+                        }`}
+                        onClick={() => {
+                          setMobileOpen(false);
+                          setMobileExpanded(null);
+                        }}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href!}
+                className={`font-poppins text-base py-2 border-b border-gray-100 ${
+                  isLinkActive(item.href!)
+                    ? "text-[#EF7933] font-semibold"
+                    : "text-[#9D9D9D]"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
           <button className="mt-2 flex items-center justify-center h-12 px-4 rounded-xl bg-[#6750A4] text-white font-medium text-sm">
             Marque uma conversa
           </button>

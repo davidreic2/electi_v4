@@ -4,7 +4,7 @@ export default function HeroSection() {
       className="relative w-full flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://api.builder.io/api/v1/image/assets/TEMP/dd2c25a6cf7fcb46388960a6e98b45f4d088a8de?width=2880')",
+          "url('/images/dd2c25a6cf7fcb46388960a6e98b45f4d088a8de.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "clamp(400px, 55vw, 671px)",

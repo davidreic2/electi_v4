@@ -1,27 +1,27 @@
 export default function PartnersSection() {
   const logos = [
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/99fb7de39f6493524e3b2ab9ce817bd36b1ebd6c?width=271",
+      src: "/images/99fb7de39f6493524e3b2ab9ce817bd36b1ebd6c.webp",
       alt: "Nicholas",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/6985badf6290344494185ec36edc60dad72223f9?width=618",
+      src: "/images/6985badf6290344494185ec36edc60dad72223f9.webp",
       alt: "Colégio Elvira Brandão",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/54ed1c7bd4a4dfad8e63c5686b88ce8649d0e10d?width=400",
+      src: "/images/54ed1c7bd4a4dfad8e63c5686b88ce8649d0e10d.webp",
       alt: "Santo",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/021bcfec3ecb4f2dcb9e2e4d0f7d349fda6cc350?width=430",
+      src: "/images/021bcfec3ecb4f2dcb9e2e4d0f7d349fda6cc350.webp",
       alt: "Colégio Gonoscenza",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/e169a5b1e45b47c8aecbd2cab67d056b43947599?width=328",
+      src: "/images/e169a5b1e45b47c8aecbd2cab67d056b43947599.webp",
       alt: "Sphere",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/e689342c32918564e9945323210e2d4d4381331f?width=438",
+      src: "/images/e689342c32918564e9945323210e2d4d4381331f.webp",
       alt: "Carolina Patrício",
     },
   ];

@@ -7,8 +7,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import AElecti from "./pages/AElecti";
+import ComoTrabalhamos from "./pages/ComoTrabalhamos";
 import NotFound from "./pages/NotFound";
-import Placeholder from "./pages/Placeholder";
+import NaPratica from "./pages/NaPratica";
+import ParaRedes from "./pages/ParaRedes";
+import Eventos from "./pages/Eventos";
 
 const queryClient = new QueryClient();
 
@@ -20,26 +24,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/a-electi"
-            element={<Placeholder title="A Electi" />}
-          />
-          <Route
-            path="/como-trabalhamos"
-            element={<Placeholder title="Como Trabalhamos" />}
-          />
-          <Route
-            path="/na-pratica"
-            element={<Placeholder title="Na Prática" />}
-          />
-          <Route
-            path="/eventos"
-            element={<Placeholder title="Eventos" />}
-          />
-          <Route
-            path="/para-escolas"
-            element={<Placeholder title="Para Escolas" />}
-          />
+          {/* A Electi submenu pages */}
+          <Route path="/para-escolas" element={<AElecti />} />
+          <Route path="/para-redes" element={<ParaRedes />} />
+          <Route path="/quem-somos" element={<NaPratica />} />
+          <Route path="/na-pratica" element={<NaPratica />} />
+          {/* Como trabalhamos */}
+          <Route path="/como-trabalhamos" element={<ComoTrabalhamos />} />
+          {/* Eventos */}
+          <Route path="/eventos" element={<Eventos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

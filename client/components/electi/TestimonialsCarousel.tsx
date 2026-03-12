@@ -4,21 +4,21 @@ const testimonials = [
   {
     id: 1,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/a421198468ea05f570a941b8c377330fef10dbef?width=128",
+      "/images/a421198468ea05f570a941b8c377330fef10dbef.webp",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
     author: "Lorem ipsum",
   },
   {
     id: 2,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/1f9bb38fc79cf2c6eb037410ba1c61b8cda5534f?width=128",
+      "/images/1f9bb38fc79cf2c6eb037410ba1c61b8cda5534f.webp",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
     author: "Lorem ipsum",
   },
   {
     id: 3,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/806ed48eb51ea00568ae399a9ddcc84eddd8013c?width=408",
+      "/images/806ed48eb51ea00568ae399a9ddcc84eddd8013c.webp",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
     author: "Lorem ipsum",
     isImage: true,
@@ -26,7 +26,7 @@ const testimonials = [
   {
     id: 4,
     avatar:
-      "https://api.builder.io/api/v1/image/assets/TEMP/a421198468ea05f570a941b8c377330fef10dbef?width=128",
+      "/images/a421198468ea05f570a941b8c377330fef10dbef.webp",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
     author: "Lorem ipsum",
   },

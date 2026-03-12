@@ -75,7 +75,7 @@ export default function PillarsSection() {
         {/* Chart image */}
         <div className="w-full lg:w-auto flex-shrink-0 flex justify-center">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/364531998884fd8868498f87b3fc39258ac3845f?width=745"
+            src="/images/364531998884fd8868498f87b3fc39258ac3845f.webp"
             alt="Socioemocional consultivo chart"
             className="w-full max-w-[320px] lg:max-w-[340px] xl:max-w-[380px] h-auto object-contain"
           />

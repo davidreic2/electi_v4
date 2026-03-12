@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="max-w-[1170px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
           {/* Logo */}
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/068f6db9840dcf87691a63345ce631a979ee253e?width=342"
+            src="/images/068f6db9840dcf87691a63345ce631a979ee253e.webp"
             alt="Electi"
             className="h-16 md:h-20 w-auto object-contain"
           />
