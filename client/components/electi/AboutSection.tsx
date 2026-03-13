@@ -2,16 +2,16 @@ export default function AboutSection() {
   return (
     <section className="bg-white py-10 md:py-16 px-4 md:px-8 lg:px-[135px] overflow-hidden">
       {/* Photos row */}
-      <div className="flex flex-col md:flex-row items-stretch gap-8 md:gap-12 mb-10 md:mb-14 max-w-[1170px] mx-auto">
+      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-10 md:mb-14 max-w-[1170px] mx-auto">
         <img
           src="/images/d4d90086027c4d2a1484dad84d6c121c628b1c50.webp"
           alt="Electi formação"
-          className="flex-1 min-h-[220px] md:h-[358px] object-cover rounded-3xl border-[12px] border-[#FAB834]"
+          className="flex-1 min-w-0 h-[260px] md:h-[358px] object-cover rounded-3xl border-4 border-[#FAB834]"
         />
         <img
           src="/images/bae2740d20a5c8e9e4a9a5925caeb75d9622c723.webp"
           alt="Electi equipe"
-          className="w-full md:w-[358px] md:h-[358px] h-[260px] object-cover rounded-3xl border-[12px] border-[#34B7C0] flex-shrink-0"
+          className="w-full md:w-[340px] h-[260px] md:h-[358px] object-cover rounded-3xl border-4 border-[#34B7C0] flex-shrink-0"
         />
       </div>
 

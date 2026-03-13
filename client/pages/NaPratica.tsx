@@ -1,15 +1,6 @@
 import Navbar from "@/components/electi/Navbar";
 import Footer from "@/components/electi/Footer";
 
-const GRID_ICON = (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M3 3H11V11H3V3ZM3 13H11V21H3V13ZM13 3H21V11H13V3ZM13 13H21V21H13V13ZM15 5V9H19V5H15ZM15 15V19H19V15H15ZM5 5V9H9V5H5ZM5 15V19H9V15H5Z"
-      fill="#5B4696"
-    />
-  </svg>
-);
-
 function PhotoGrid({
   large,
   midTop,
@@ -24,35 +15,29 @@ function PhotoGrid({
   rightBottom: string;
 }) {
   return (
-    <div className="flex h-[432px] items-stretch gap-3 rounded-2xl overflow-hidden w-full">
+    <div className="flex flex-col md:flex-row h-auto md:h-[432px] items-stretch gap-3 rounded-2xl overflow-hidden w-full">
       {/* Large left image */}
-      <div className="w-[40%] flex-shrink-0 rounded-l-xl overflow-hidden">
-        <img src={large} alt="" className="w-full h-full object-cover" />
+      <div className="w-full md:w-[40%] flex-shrink-0 rounded-xl md:rounded-l-xl md:rounded-r-none overflow-hidden">
+        <img src={large} alt="Electi na prática" className="w-full h-[260px] md:h-full object-cover" />
       </div>
 
       {/* Middle column */}
-      <div className="flex flex-col gap-3 flex-1 min-w-0">
-        <img src={midTop} alt="" className="flex-1 w-full object-cover min-h-0" />
-        <img src={midBottom} alt="" className="flex-1 w-full object-cover min-h-0" />
+      <div className="flex flex-row md:flex-col gap-3 flex-1 min-w-0">
+        <img src={midTop} alt="Electi na prática" className="flex-1 w-full h-[180px] md:h-auto object-cover min-h-0 rounded-xl md:rounded-none" />
+        <img src={midBottom} alt="Electi na prática" className="flex-1 w-full h-[180px] md:h-auto object-cover min-h-0 rounded-xl md:rounded-none" />
       </div>
 
       {/* Right column */}
-      <div className="flex flex-col gap-3 flex-1 min-w-0">
-        <img src={rightTop} alt="" className="flex-1 w-full object-cover min-h-0" />
-        {/* Bottom-right with overlay button */}
+      <div className="flex flex-row md:flex-col gap-3 flex-1 min-w-0">
+        <img src={rightTop} alt="Electi na prática" className="flex-1 w-full h-[180px] md:h-auto object-cover min-h-0 rounded-xl md:rounded-none" />
         <div
-          className="flex-1 relative overflow-hidden flex items-end p-4"
+          className="flex-1 relative overflow-hidden flex items-end p-4 rounded-xl md:rounded-none min-h-[180px] md:min-h-0"
           style={{
             backgroundImage: `url('${rightBottom}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        >
-          <button className="flex items-center justify-center gap-2 w-full bg-white rounded-xl px-4 py-2.5 shadow-md font-roboto text-sm font-medium text-[#5B4696] leading-5 tracking-wide">
-            {GRID_ICON}
-            Mostrar todas as fotos
-          </button>
-        </div>
+        />
       </div>
     </div>
   );
@@ -65,21 +50,24 @@ export default function NaPratica() {
       <main className="flex-1">
       {/* ── Hero ── */}
       <section
-        className="flex flex-col items-center gap-14 pb-18 pt-10"
+        className="flex flex-col items-center gap-14 pb-16 md:pb-18 pt-28 md:pt-32 px-4"
         style={{
           background: `url('/images/9318f3c52e6a2d81807868aea132233f3a678f7d.webp') #AECB3C center / cover no-repeat`,
         }}
       >
         {/* Heading */}
-        <h1 className="text-center leading-[90px] tracking-[0.1px]" style={{ fontSize: "84px" }}>
+        <h1
+          className="text-center tracking-[0.1px]"
+          style={{ fontSize: "clamp(36px, 7vw, 84px)", lineHeight: "1.1" }}
+        >
           <span className="font-normal text-[#5B4696]">A Electi</span>{" "}
           <span className="font-bold text-white">na prática</span>
         </h1>
       </section>
 
       {/* ── Projetos dos estudantes ── */}
-      <section className="flex flex-col items-center gap-10 px-[135px] py-14 bg-[#FAB834]">
-        <h2 className="text-[#5B4696] text-5xl font-semibold leading-[63px]">
+      <section className="flex flex-col items-center gap-8 md:gap-10 px-4 md:px-8 lg:px-[135px] py-10 md:py-14 bg-[#FAB834]">
+        <h2 className="text-[#5B4696] text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
           Projetos dos estudantes
         </h2>
         <PhotoGrid
@@ -92,8 +80,8 @@ export default function NaPratica() {
       </section>
 
       {/* ── Relatório diagnóstico para cada escola ── */}
-      <section className="flex flex-col items-center gap-10 px-[135px] py-14 bg-[#5B4696]">
-        <h2 className="text-white text-5xl font-semibold leading-[63px] text-center">
+      <section className="flex flex-col items-center gap-8 md:gap-10 px-4 md:px-8 lg:px-[135px] py-10 md:py-14 bg-[#5B4696]">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
           Relatório diagnóstico para cada escola
         </h2>
         <PhotoGrid
@@ -106,8 +94,8 @@ export default function NaPratica() {
       </section>
 
       {/* ── Guias temáticos e formação continuada ── */}
-      <section className="flex flex-col items-center gap-10 px-[135px] py-14 bg-[#34B7C0]">
-        <h2 className="text-[#5B4696] text-5xl font-semibold leading-[63px] text-center">
+      <section className="flex flex-col items-center gap-8 md:gap-10 px-4 md:px-8 lg:px-[135px] py-10 md:py-14 bg-[#34B7C0]">
+        <h2 className="text-[#5B4696] text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
           Guias temáticos e formação continuada
         </h2>
         <PhotoGrid

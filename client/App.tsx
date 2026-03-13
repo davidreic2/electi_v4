@@ -12,7 +12,7 @@ import ComoTrabalhamos from "./pages/ComoTrabalhamos";
 import NotFound from "./pages/NotFound";
 import NaPratica from "./pages/NaPratica";
 import ParaRedes from "./pages/ParaRedes";
-import Eventos from "./pages/Eventos";
+import QuemSomos from "./pages/QuemSomos";
 
 const queryClient = new QueryClient();
 
@@ -27,12 +27,10 @@ const App = () => (
           {/* A Electi submenu pages */}
           <Route path="/para-escolas" element={<AElecti />} />
           <Route path="/para-redes" element={<ParaRedes />} />
-          <Route path="/quem-somos" element={<NaPratica />} />
+          <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/na-pratica" element={<NaPratica />} />
           {/* Como trabalhamos */}
           <Route path="/como-trabalhamos" element={<ComoTrabalhamos />} />
-          {/* Eventos */}
-          <Route path="/eventos" element={<Eventos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

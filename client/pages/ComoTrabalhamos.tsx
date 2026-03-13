@@ -89,7 +89,7 @@ export default function ComoTrabalhamos() {
       <Navbar />
       <main className="flex-1">
       {/* ── Sub-tabs ── */}
-      <section className="bg-[#EF7933] px-8 pt-6 pb-4 flex flex-col items-center gap-6">
+      <section className="bg-[#EF7933] px-4 md:px-8 pt-24 md:pt-28 pb-4 flex flex-col items-center gap-6">
         <div className="flex items-center gap-3 flex-wrap justify-center">
           {SUB_TABS.map((tab, i) => (
             <button
@@ -108,11 +108,11 @@ export default function ComoTrabalhamos() {
       </section>
 
       {/* ── Hero ── */}
-      <section className="bg-[#EF7933] px-8 pb-16">
-        <div className="max-w-5xl mx-auto flex items-center gap-10">
+      <section className="bg-[#EF7933] px-4 md:px-8 pb-12 md:pb-16">
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
           {/* Left */}
           <div className="flex flex-col gap-6 flex-1">
-            <h1 className="text-5xl font-semibold leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
               <span className="text-white">Implementação</span>
               <span className="text-[#5B4696]"> das </span>
               <span className="text-white">Trilhas</span>
@@ -132,7 +132,7 @@ export default function ComoTrabalhamos() {
                   key={item}
                   className="flex items-center gap-2 border-l-[12px] border-[#34B7C0] pl-4 py-1"
                 >
-                  <span className="text-white text-2xl font-semibold">{item}</span>
+                  <span className="text-white text-lg md:text-2xl font-semibold">{item}</span>
                 </div>
               ))}
             </div>
@@ -142,21 +142,21 @@ export default function ComoTrabalhamos() {
           <img
             src="/images/3a64075bbd832108aa2ed569de3f759a0fcf9f7e.webp"
             alt="Mural Electi"
-            className="w-[520px] h-[300px] object-cover rounded-3xl border-[12px] border-[#FAB834] flex-shrink-0"
+            className="w-full lg:w-[520px] h-[220px] md:h-[300px] object-cover rounded-3xl border-[8px] md:border-[12px] border-[#FAB834] flex-shrink-0"
           />
         </div>
       </section>
 
       {/* ── Fundamentações 1 (dark bg with pattern) ── */}
       <section
-        className="py-24 px-8"
+        className="py-14 md:py-24 px-4 md:px-8"
         style={{
           background:
             "url('/images/23b42b6f13c3e413f568486eb4d85df17502d3eb.webp') lightgray 50% / cover no-repeat",
         }}
       >
-        <div className="max-w-5xl mx-auto flex flex-col gap-12">
-          <h2 className="text-5xl font-semibold text-center leading-tight">
+        <div className="max-w-5xl mx-auto flex flex-col gap-10 md:gap-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center leading-tight">
             <span className="text-white">E assim construimos nossas{"\n"}</span>
             <span className="text-[#FAB834]">Fundamentações</span>
             <span className="text-white"> e </span>
@@ -164,12 +164,12 @@ export default function ComoTrabalhamos() {
           </h2>
 
           {/* Cards grid */}
-          <div className="flex gap-7 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
             {/* Left column */}
-            <div className="flex flex-col gap-7 flex-1">
+            <div className="flex flex-col gap-5 md:gap-7">
               {/* Pensadores */}
-              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col gap-6">
-                <h3 className="text-[#5B4696] text-2xl font-semibold">
+              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+                <h3 className="text-[#5B4696] text-xl md:text-2xl font-semibold">
                   Pensadores que nos inspiram
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -180,8 +180,8 @@ export default function ComoTrabalhamos() {
               </div>
 
               {/* BNCC */}
-              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col gap-6">
-                <h3 className="text-[#5B4696] text-2xl font-semibold">
+              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+                <h3 className="text-[#5B4696] text-xl md:text-2xl font-semibold">
                   BNCC + DNCEI
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -193,10 +193,10 @@ export default function ComoTrabalhamos() {
             </div>
 
             {/* Center column */}
-            <div className="flex flex-col gap-7 flex-1">
+            <div className="flex flex-col gap-5 md:gap-7">
               {/* Reggio Emilia */}
-              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col gap-4">
-                <h3 className="text-[#5B4696] text-2xl font-semibold">
+              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-4">
+                <h3 className="text-[#5B4696] text-xl md:text-2xl font-semibold">
                   Reggio Emilia (infantil)
                 </h3>
                 <ul className="flex flex-col gap-1">
@@ -209,8 +209,8 @@ export default function ComoTrabalhamos() {
               </div>
 
               {/* Frameworks */}
-              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col gap-6">
-                <h3 className="text-[#5B4696] text-2xl font-semibold">
+              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+                <h3 className="text-[#5B4696] text-xl md:text-2xl font-semibold">
                   Frameworks internacionais
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -222,10 +222,10 @@ export default function ComoTrabalhamos() {
             </div>
 
             {/* Right column */}
-            <div className="flex flex-col gap-7 flex-1">
+            <div className="flex flex-col gap-5 md:gap-7">
               {/* Metodologia Electi */}
-              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col gap-6">
-                <h3 className="text-[#5B4696] text-2xl font-semibold">
+              <div className="bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+                <h3 className="text-[#5B4696] text-xl md:text-2xl font-semibold">
                   Metodologia Electi (8 pilares)
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -240,9 +240,9 @@ export default function ComoTrabalhamos() {
       </section>
 
       {/* ── Fundamentações 2 (white bg) ── */}
-      <section className="bg-white py-24 px-8">
-        <div className="max-w-5xl mx-auto flex flex-col gap-16">
-          <h2 className="text-5xl font-semibold text-center leading-tight">
+      <section className="bg-white py-14 md:py-24 px-4 md:px-8">
+        <div className="max-w-5xl mx-auto flex flex-col gap-10 md:gap-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center leading-tight">
             <span className="text-[#5B4696]">E assim construimos nossas{"\n"}</span>
             <span className="text-[#FAB834]">Fundamentações</span>
             <span className="text-[#5B4696]"> e </span>
@@ -250,28 +250,28 @@ export default function ComoTrabalhamos() {
           </h2>
 
           {/* Photos row */}
-          <div className="flex gap-12 items-start">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-stretch">
             <img
               src="/images/79e57492c58ea105be42b6a7c9d20f00b7fdcd44.webp"
               alt="Atividade em sala"
-              className="flex-1 h-[290px] object-cover rounded-3xl border-[12px] border-[#FAB834]"
+              className="flex-1 h-[220px] md:h-[290px] object-cover rounded-3xl border-[8px] md:border-[12px] border-[#FAB834]"
             />
             <img
               src="/images/d78d8dca4b53ebeced4a1a6f9446bc108949b333.webp"
               alt="Criança com fantasia"
-              className="w-[290px] h-[290px] object-cover rounded-3xl border-[12px] border-[#34B7C0] flex-shrink-0"
+              className="w-full md:w-[290px] h-[220px] md:h-[290px] object-cover rounded-3xl border-[8px] md:border-[12px] border-[#34B7C0] flex-shrink-0"
             />
             <img
               src="/images/38757c54fef551a2732c49a135e1a374d291ad80.webp"
               alt="Projeto escolar"
-              className="w-[290px] h-[290px] object-cover rounded-3xl border-[12px] border-[#AECB3C] flex-shrink-0"
+              className="w-full md:w-[290px] h-[220px] md:h-[290px] object-cover rounded-3xl border-[8px] md:border-[12px] border-[#AECB3C] flex-shrink-0"
             />
           </div>
 
           {/* Metodologias de projetos */}
-          <div className="flex items-center gap-8">
-            <h3 className="text-[#5B4696] text-5xl font-semibold leading-tight w-[380px] flex-shrink-0">
-              Metodologias{"\n"}de projetos
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+            <h3 className="text-[#5B4696] text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight lg:w-[380px] lg:flex-shrink-0">
+              Metodologias de projetos
             </h3>
             <p className="text-black text-sm leading-normal flex-1">
               Os projetos permitem que a trilha seja viva, flexível e adaptável ao que já existe em cada
@@ -282,57 +282,57 @@ export default function ComoTrabalhamos() {
           </div>
 
           {/* Mascots row */}
-          <div className="flex justify-between items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 justify-items-center">
             {/* Swallow – circle yellow */}
-            <div className="relative w-[170px] h-[170px] rounded-full bg-[#FAB834] flex-shrink-0">
+            <div className="relative w-[130px] h-[130px] md:w-[170px] md:h-[170px] rounded-full bg-[#FAB834] flex-shrink-0">
               <img
                 src="/images/d4eb26617991262160d516cf6d58e4ac9f93aac9.webp"
                 alt="Andorinha mascote"
-                className="absolute bottom-0 left-4 w-[110px] object-contain"
+                className="absolute bottom-0 left-3 md:left-4 w-[85px] md:w-[110px] object-contain"
               />
             </div>
 
             {/* Leopard – rounded square teal */}
-            <div className="relative w-[170px] h-[170px] rounded-[40px] bg-[#2FB6B7] flex-shrink-0 overflow-visible">
+            <div className="relative w-[130px] h-[130px] md:w-[170px] md:h-[170px] rounded-[30px] md:rounded-[40px] bg-[#2FB6B7] flex-shrink-0 overflow-visible">
               <img
                 src="/images/5cce40378e2efeeb58cc8b662e0bfaec5d2be101.webp"
                 alt="Onça mascote"
-                className="absolute -top-6 left-2 w-[130px] object-contain"
+                className="absolute -top-4 md:-top-6 left-1 md:left-2 w-[100px] md:w-[130px] object-contain"
               />
             </div>
 
             {/* Dolphin – rounded square green */}
-            <div className="relative w-[170px] h-[170px] rounded-[40px] bg-[#AECB3C] flex-shrink-0 overflow-visible">
+            <div className="relative w-[130px] h-[130px] md:w-[170px] md:h-[170px] rounded-[30px] md:rounded-[40px] bg-[#AECB3C] flex-shrink-0 overflow-visible">
               <img
                 src="/images/b47bfbf700d85093886f85e709a3359ae274d7b8.webp"
                 alt="Boto mascote"
-                className="absolute -top-5 -left-4 w-[210px] object-contain"
+                className="absolute -top-4 md:-top-5 -left-3 md:-left-4 w-[160px] md:w-[210px] object-contain"
               />
             </div>
 
             {/* Frog – mixed border-radius orange */}
             <div
-              className="relative w-[170px] h-[170px] flex-shrink-0 bg-[#EF7933] overflow-visible"
+              className="relative w-[130px] h-[130px] md:w-[170px] md:h-[170px] flex-shrink-0 bg-[#EF7933] overflow-visible"
               style={{ borderRadius: "200px 40px 40px 40px" }}
             >
               <img
                 src="/images/1c40150a47e3ebfd360dfa3de5bd804aad930661.webp"
                 alt="Boana mascote"
-                className="absolute top-10 left-8 w-[115px] object-contain"
+                className="absolute top-8 md:top-10 left-6 md:left-8 w-[85px] md:w-[115px] object-contain"
               />
             </div>
           </div>
 
           {/* Aprendizagem pela experiência */}
-          <div className="flex items-center gap-8">
-            <h3 className="text-[#5B4696] text-5xl font-semibold leading-tight w-[380px] flex-shrink-0">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+            <h3 className="text-[#5B4696] text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight lg:w-[380px] lg:flex-shrink-0">
               Aprendizagem pela experiência
             </h3>
             <div className="flex flex-wrap gap-3 flex-1">
               {EXPERIENCIA_TAGS.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center px-2 py-1 bg-[#FAB834] text-[#5B4696] font-semibold text-2xl"
+                  className="inline-flex items-center px-2 py-1 bg-[#FAB834] text-[#5B4696] font-semibold text-base md:text-xl lg:text-2xl"
                 >
                   {tag}
                 </span>
@@ -342,34 +342,13 @@ export default function ComoTrabalhamos() {
         </div>
       </section>
 
-      {/* ── Video Section ── */}
-      <section className="relative flex items-center justify-center py-32 bg-gray-900 overflow-hidden">
-        {/* bokeh overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(250,184,52,0.35)_0%,transparent_60%),radial-gradient(ellipse_at_80%_30%,rgba(250,184,52,0.25)_0%,transparent_50%),radial-gradient(ellipse_at_60%_70%,rgba(250,184,52,0.2)_0%,transparent_50%)] pointer-events-none" />
-        {/* Play button */}
-        <button className="relative z-10 w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-2xl hover:scale-105 transition-transform">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M8 5v14l11-7L8 5z" fill="#5B4696" />
-          </svg>
-        </button>
-        {/* Dots pagination */}
-        <div className="absolute bottom-8 flex gap-2">
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className={`w-2.5 h-2.5 rounded-full ${i === 1 ? "bg-white" : "bg-white/40"}`}
-            />
-          ))}
-        </div>
-      </section>
-
       {/* ── 8 Pilares (yellow bg) ── */}
-      <section className="bg-[#FAB834] px-8 py-16">
-        <div className="max-w-5xl mx-auto flex flex-col gap-12">
-          <div className="flex gap-12 items-start">
+      <section className="bg-[#FAB834] px-4 md:px-8 py-12 md:py-16">
+        <div className="max-w-5xl mx-auto flex flex-col gap-10 md:gap-12">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             {/* Left text */}
-            <div className="flex flex-col gap-6 w-[340px] flex-shrink-0">
-              <h2 className="text-[#5B4696] text-5xl font-semibold leading-tight">
+            <div className="flex flex-col gap-6 lg:w-[340px] lg:flex-shrink-0">
+              <h2 className="text-[#5B4696] text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                 Metodologia autoral{" "}
                 <span className="text-[#EF7933]">8 pilares</span>
               </h2>
@@ -383,31 +362,31 @@ export default function ComoTrabalhamos() {
             </div>
 
             {/* Carousel */}
-            <div className="flex items-center gap-4 flex-1 overflow-hidden">
+            <div className="flex items-center gap-3 md:gap-4 flex-1 overflow-hidden w-full">
               {/* Prev button */}
               <button
                 onClick={prevPilar}
                 disabled={currentPilar === 0}
-                className="w-14 h-14 rounded-full bg-[#5B4696] flex items-center justify-center flex-shrink-0 disabled:opacity-40 transition-opacity"
+                className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#5B4696] flex items-center justify-center flex-shrink-0 disabled:opacity-40 transition-opacity"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M15.4 12L9.4 6L8 7.4L12.6 12L8 16.6L9.4 18L15.4 12Z" fill="white" transform="scale(-1,1) translate(-24,0)" />
                 </svg>
               </button>
 
               {/* Cards */}
-              <div className="flex gap-6 overflow-hidden flex-1">
+              <div className="flex gap-4 md:gap-6 overflow-hidden flex-1">
                 {PILARES.slice(currentPilar, currentPilar + 2).map((pilar) => (
                   <div
                     key={pilar.number}
-                    className="flex-1 min-w-0 bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-8 flex flex-col items-center gap-4"
+                    className="flex-1 min-w-0 bg-white rounded-2xl md:rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-5 md:p-8 flex flex-col items-center gap-3 md:gap-4"
                   >
-                    <div className="w-12 h-12 rounded-full bg-[#FAB834] flex items-center justify-center">
-                      <span className="text-[#EC6C05] text-4xl font-black leading-none">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#FAB834] flex items-center justify-center">
+                      <span className="text-[#EC6C05] text-2xl md:text-4xl font-black leading-none">
                         {pilar.number}
                       </span>
                     </div>
-                    <p className="text-[#5B4696] text-2xl text-center leading-normal">
+                    <p className="text-[#5B4696] text-base md:text-2xl text-center leading-normal">
                       {pilar.title}
                     </p>
                   </div>
@@ -418,9 +397,9 @@ export default function ComoTrabalhamos() {
               <button
                 onClick={nextPilar}
                 disabled={currentPilar >= PILARES.length - 2}
-                className="w-14 h-14 rounded-full bg-[#5B4696] flex items-center justify-center flex-shrink-0 disabled:opacity-40 transition-opacity"
+                className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#5B4696] flex items-center justify-center flex-shrink-0 disabled:opacity-40 transition-opacity"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M8.6 12L14.6 6L16 7.4L11.4 12L16 16.6L14.6 18L8.6 12Z" fill="white" transform="scale(-1,1) translate(-24,0)" />
                 </svg>
               </button>

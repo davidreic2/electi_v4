@@ -67,13 +67,13 @@ export default function SocialProofSection() {
               className="flex flex-col items-center gap-6"
             >
               {/* Score circle */}
-              <div className="w-[134px] h-[134px] rounded-full bg-[#EF7933] flex flex-col items-center justify-center flex-shrink-0">
+              <div className="w-[140px] h-[140px] rounded-full bg-[#EF7933] flex flex-col items-center justify-center flex-shrink-0">
                 {metric.showNota && (
                   <span className="font-poppins font-semibold text-sm text-[#5B4696] leading-none">
                     NOTA
                   </span>
                 )}
-                <span className="font-poppins font-black text-white leading-none text-5xl md:text-[56px]">
+                <span className="font-poppins font-black text-white leading-none text-4xl md:text-[44px]">
                   {metric.value}
                 </span>
               </div>

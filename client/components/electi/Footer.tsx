@@ -18,11 +18,11 @@ export default function Footer() {
           {/* Nav links */}
           <nav className="flex flex-col gap-1">
             {[
-              { label: "Home", href: "/" },
               { label: "Para escolas", href: "/para-escolas" },
+              { label: "Para redes", href: "/para-redes" },
+              { label: "Quem somos", href: "/quem-somos" },
               { label: "Como trabalhamos", href: "/como-trabalhamos" },
               { label: "Na prática", href: "/na-pratica" },
-              { label: "Eventos", href: "/eventos" },
             ].map((link) => (
               <Link
                 key={link.label}
@@ -34,27 +34,13 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Legal links */}
-          <div className="flex flex-col gap-1">
-            <a
-              href="#"
-              className="font-poppins text-white text-base leading-9 hover:underline"
-            >
-              Termos de uso
-            </a>
-            <a
-              href="#"
-              className="font-poppins text-white text-base leading-9 hover:underline"
-            >
-              Políticas de privacidade
-            </a>
-          </div>
-
           {/* Social icons */}
           <div className="flex items-center gap-4">
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/electi_educacional/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="w-[60px] h-[60px] rounded-full bg-white flex items-center justify-center hover:scale-105 transition-transform"
             >
@@ -73,7 +59,9 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://br.linkedin.com/company/electieducacional"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="w-[60px] h-[60px] rounded-full bg-white flex items-center justify-center hover:scale-105 transition-transform"
             >

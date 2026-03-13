@@ -33,14 +33,7 @@ export default function AElecti() {
         {/* 6. Green "Como fazemos" accordion */}
         <AElectiHowSection />
 
-        {/* 7. Game / Pandinha image */}
-        <img
-          src="/images/2b71bc03758f10515c4f3d6bbfd8981477ad5764.webp"
-          alt="Jogo Pandinha"
-          className="w-full h-[320px] md:h-[480px] lg:h-[600px] object-cover"
-        />
-
-        {/* 8. Yellow divider */}
+        {/* Yellow divider */}
         <div className="h-4 bg-[#FAB834]" />
       </main>
       <Footer />
