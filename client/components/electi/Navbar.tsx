@@ -51,7 +51,7 @@ function DesktopDropdown({ item, pathname }: { item: NavItem; pathname: string }
       onMouseLeave={handleLeave}
     >
       <button
-        className={`font-poppins text-base whitespace-nowrap transition-colors hover:text-[#EF7933] flex items-center gap-1 ${
+        className={`font-poppins text-sm lg:text-base whitespace-nowrap transition-colors hover:text-[#EF7933] flex items-center gap-1 ${
           isActive ? "text-[#EF7933] font-semibold" : "text-[#9D9D9D] font-normal"
         }`}
       >
@@ -104,8 +104,8 @@ export default function Navbar() {
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <nav className="w-full px-4 md:px-8 lg:px-[135px] pt-4 bg-white sticky top-0 z-50">
-      <div className="flex items-center justify-between gap-6 px-6 md:px-8 py-3 rounded-2xl bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.30)]">
+    <nav className="fixed top-0 left-0 right-0 px-4 md:px-8 lg:px-16 xl:px-[135px] pt-4 z-50">
+      <div className="flex items-center justify-between gap-4 px-5 md:px-6 py-3 rounded-2xl bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.30)]">
         {/* Logo */}
         <img
           src="/images/6cc4acb852d525cf860937b0c78de0a6a5333fc4.webp"
@@ -114,7 +114,7 @@ export default function Navbar() {
         />
 
         {/* Desktop nav links */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
           {navItems.map((item) =>
             item.sub ? (
               <DesktopDropdown key={item.label} item={item} pathname={pathname} />
@@ -122,7 +122,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 to={item.href!}
-                className={`font-poppins text-base whitespace-nowrap transition-colors hover:text-[#EF7933] ${
+                className={`font-poppins text-sm lg:text-base whitespace-nowrap transition-colors hover:text-[#EF7933] ${
                   isLinkActive(item.href!)
                     ? "text-[#EF7933] font-semibold"
                     : "text-[#9D9D9D] font-normal"
@@ -135,7 +135,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <button className="hidden lg:flex items-center justify-center h-12 px-4 rounded-xl bg-[#6750A4] text-white font-medium text-sm whitespace-nowrap hover:bg-[#5B4696] transition-colors">
+        <button className="hidden lg:flex items-center justify-center h-10 px-3 xl:px-4 rounded-xl bg-[#6750A4] text-white font-medium text-xs xl:text-sm whitespace-nowrap hover:bg-[#5B4696] transition-colors flex-shrink-0">
           Marque uma conversa
         </button>
 
