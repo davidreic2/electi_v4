@@ -1,6 +1,6 @@
 const pillars = [
   {
-    title: "Atendimento",
+    title: "Célula de Atendimento",
     description:
       "Criamos uma célula interna de atendimento exclusiva para cada rede, com limite de escolas atendidas por cada assessora pedagógica e contato direto e frequente das escolas e equipe gestora da rede com a Electi.",
     icon: (
@@ -16,7 +16,7 @@ const pillars = [
     ),
   },
   {
-    title: "Processo de escuta aprofundada",
+    title: "Escuta aprofundada",
     description:
       "Temos um processo interno para escutar e adaptar a nossa entrega ao que faz mais sentido para cada rede. Começando pelo relacionamento durante a venda e a formatação da proposta até o atendimento específico da assessoria pedagógica na Jornada SER.",
     icon: (

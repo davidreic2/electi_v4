@@ -63,7 +63,7 @@ export default function ParaRedesHero() {
               {/* Label */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#FAB834] px-2 py-1 whitespace-nowrap">
                 <span className="font-poppins font-semibold text-[#5B4696] text-sm md:text-lg lg:text-[22px] leading-tight">
-                  Atendimento
+                  Célula de Atendimento
                 </span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function ParaRedesHero() {
               {/* Label */}
               <div className="absolute bottom-0 right-0 translate-y-1/2 bg-[#AECB3C] px-2 py-1 text-center max-w-[120px] md:max-w-[160px]">
                 <span className="font-poppins font-semibold text-[#5B4696] text-sm md:text-base lg:text-xl leading-tight">
-                  Processo de escuta aprofundada
+                  Escuta aprofundada
                 </span>
               </div>
             </div>

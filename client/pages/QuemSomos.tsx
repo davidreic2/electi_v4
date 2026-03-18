@@ -99,14 +99,14 @@ export default function QuemSomos() {
                 responsabilidade de cuidar das relações, das emoções e da cultura da escola.
               </p>
               <p className="mb-4">
-                Atuamos como um braço que sustenta e organiza o trabalho socioemocional, oferecendo
-                formações, ferramentas práticas e caminhos claros para lidar com conflitos, fortalecer
+                Atuamos como um braço que sustenta e organiza o trabalho socioemocional, oferecendo{" "}
+                <strong>formações, ferramentas práticas e caminhos claros</strong> para lidar com conflitos, fortalecer
                 vínculos e dar conta das demandas complexas que surgem entre estudantes, educadores e
                 famílias.
               </p>
               <p>
-                Criamos espaços de escuta e acolhimento para educadores e coordenação, gerando alívio
-                real da sobrecarga emocional e operacional. Porque uma escola com relações bem cuidadas
+                Criamos <strong>espaços de escuta e acolhimento</strong> para educadores e coordenação, gerando{" "}
+                <strong>alívio real da sobrecarga</strong> emocional e operacional. Porque uma escola com relações bem cuidadas
                 trabalha melhor, respira melhor e aprende melhor.
               </p>
             </div>
@@ -197,13 +197,13 @@ export default function QuemSomos() {
             <div className="flex-1 text-sm leading-relaxed text-white">
               <p className="mb-4">
                 Somos o suporte técnico e humano que reduz sobrecarga e amplia a potência pedagógica,
-                com base em escuta, experiência e escolha.
+                com base em <strong>escuta, experiência e escolha</strong>.
               </p>
               <p>
-                A Electi oferece trilhas flexíveis, formações práticas e acompanhamento contínuo para
+                A Electi oferece <strong>trilhas flexíveis, formações práticas e acompanhamento contínuo</strong> para
                 que educadores conduzam grupos com confiança, manejem conflitos com intencionalidade
-                pedagógica e tenham apoio para tomada de decisões. Valorizamos a experiência de cada
-                educador, escutamos suas necessidades e cocriamos caminhos possíveis dentro de cada
+                pedagógica e tenham apoio para tomada de decisões. Valorizamos a <strong>experiência</strong> de cada
+                educador, <strong>escutamos</strong> suas necessidades e cocriamos caminhos possíveis dentro de cada
                 realidade.
               </p>
             </div>

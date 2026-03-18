@@ -1,18 +1,15 @@
 const trainings = [
   {
-    number: "7/15",
-    period: "Semanal/Quinzenal (opcional)",
+    period: "Semanal / Quinzenal (opcional)",
     participants: "Gestor Célula + Gestão SE Rede",
     objective: "Operacionalização, escuta de campo, ajuste fino",
   },
   {
-    number: "30",
     period: "Mensal",
     participants: "Lideranças da rede + Lideranças Electi",
     objective: "Avaliação geral, alinhamentos estratégicos",
   },
   {
-    number: "90",
     period: "Trimestral",
     participants: "Direção + gestão + célula",
     objective: "Avaliação de impacto, redefinição de metas",
@@ -41,15 +38,12 @@ export default function ParaRedesTreinamentos() {
         {/* Cards row */}
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
           {trainings.map((training, index) => (
-            <div key={training.number} className="flex flex-col md:flex-row items-center gap-4 flex-1 w-full">
+            <div key={training.period} className="flex flex-col md:flex-row items-center gap-4 flex-1 w-full">
               {/* Card */}
               <div className="bg-white rounded-3xl p-8 flex flex-col gap-6 flex-1 w-full self-stretch">
-                {/* Number + Period */}
+                {/* Period */}
                 <div className="flex flex-col gap-0">
-                  <span className="font-poppins font-black text-5xl text-[#AECB3C] leading-[64px]">
-                    {training.number}
-                  </span>
-                  <span className="font-poppins font-normal text-2xl text-[#5B4696]">
+                  <span className="font-poppins font-semibold text-2xl text-[#5B4696]">
                     {training.period}
                   </span>
                 </div>

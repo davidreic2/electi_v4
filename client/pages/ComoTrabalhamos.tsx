@@ -379,14 +379,14 @@ export default function ComoTrabalhamos() {
                 {PILARES.slice(currentPilar, currentPilar + 2).map((pilar) => (
                   <div
                     key={pilar.number}
-                    className="flex-1 min-w-0 bg-white rounded-2xl md:rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-5 md:p-8 flex flex-col items-center gap-3 md:gap-4"
+                    className="flex-1 min-w-0 bg-white rounded-2xl md:rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-3 md:p-4 lg:p-6 flex flex-col items-center gap-2 md:gap-3 justify-center"
                   >
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#FAB834] flex items-center justify-center">
-                      <span className="text-[#EC6C05] text-2xl md:text-4xl font-black leading-none">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#FAB834] flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#EC6C05] text-2xl md:text-3xl font-black leading-none">
                         {pilar.number}
                       </span>
                     </div>
-                    <p className="text-[#5B4696] text-base md:text-2xl text-center leading-normal">
+                    <p className="text-[#5B4696] text-sm md:text-base lg:text-xl font-medium text-center leading-snug break-normal">
                       {pilar.title}
                     </p>
                   </div>
